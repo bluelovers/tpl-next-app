@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Head from '../components/head'
 import Nav from '../components/nav'
+import '../styles/style.scss'
 
 const Home = () => {
   const [date, setDate] = useState(null);
@@ -21,7 +22,7 @@ const Home = () => {
       <Nav />
 
       <div className="hero">
-        <h1 className="title">Welcome to Next!</h1>
+        <h1 className="title example">Welcome to Next!</h1>
         <p className="description">
           To get started, edit the <code>pages/index.js</code> or <code>pages/api/date.ts</code> files, then save to reload.
         </p>
