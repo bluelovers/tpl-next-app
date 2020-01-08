@@ -5,11 +5,21 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "next build && next export"
   },
   "dependencies": {
-    "next": "9.1.7",
+    "dotenv": "^8.2.0",
+    "next": "canary",
+    "next-offline": "^4.0.6",
+    "now": "canary",
     "react": "16.12.0",
     "react-dom": "16.12.0"
+  },
+  "devDependencies": {
+    "@types/next-seo": "^1.10.0",
+    "@types/node": "^13.1.4",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4"
   }
 }
