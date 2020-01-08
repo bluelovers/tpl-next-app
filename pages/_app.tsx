@@ -1,20 +1,31 @@
 import React from 'react'
 import App from 'next/app'
+import { ThemeProvider } from 'styled-components'
 
-class Layout extends React.Component {
-	render() {
-		const { children } = this.props
+const theme = {
+	colors: {
+		primary: '#0070f3',
+	},
+};
+
+class Layout extends React.Component
+{
+	render()
+	{
+		const { children } = this.props;
 		return <div className="layout">{children}</div>
 	}
 }
 
-export default class MyApp extends App {
-	render() {
+export default class MyApp extends App
+{
+	render()
+	{
 		const { Component, pageProps } = this.props
 		return (
-			<Layout>
-				<Component {...pageProps} />
-			</Layout>
+			<ThemeProvider theme={theme}>
+					<Component {...pageProps} />
+			</ThemeProvider>
 		)
 	}
 }
