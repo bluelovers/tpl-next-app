@@ -23,7 +23,7 @@ const Home = () => {
       <div className="hero">
         <h1 className="title">Welcome to Next!</h1>
         <p className="description">
-          To get started, edit the <code>pages/index.js</code> or <code>pages/api/date.js</code> files, then save to reload.
+          To get started, edit the <code>pages/index.js</code> or <code>pages/api/date.ts</code> files, then save to reload.
         </p>
 
         <p className="row date">

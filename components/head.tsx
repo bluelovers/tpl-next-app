@@ -36,6 +36,6 @@ Head.propTypes = {
 	description: string,
 	url: string,
 	ogImage: string
-}
+};
 
 export default Head
