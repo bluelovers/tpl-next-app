@@ -28,9 +28,17 @@ const Header = () => {
 					</Link>
 				</li>
 				<li>
-					<Link href="{isAmp ? '/demo/amp/dog?amp=1' : '/demo/amp/dog'}" as="/demo/amp/dog">
+					<Link href={isAmp ? '/demo/amp/dog?amp=1' : '/demo/amp/dog'} as="/demo/amp/dog">
 						<a>demo/amp/dog</a>
 					</Link>
+				</li>
+				<li>
+					<Link href="/demo/nprogress/forever">
+						<a>Forever</a>
+					</Link>
+				</li>
+				<li>
+					<a href="./non-existing">Non Existing Page</a>
 				</li>
 			</ul>
 		</header>

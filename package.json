@@ -29,12 +29,14 @@
     "tsc:esm": "tsc -p tsconfig.esm.json"
   },
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "bluebird": "^3.7.2",
     "dotenv": "^8.2.0",
     "next": "canary",
     "next-offline": "^4.0.6",
     "node-sass": "npm:sass@^1",
+    "nprogress": "^0.2.0",
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "react-router": "^5.1.2",
@@ -47,6 +49,7 @@
     "@types/bluebird": "^3.5.29",
     "@types/next-seo": "^1.10.0",
     "@types/node": "^13.1.4",
+    "@types/nprogress": "^0.2.0",
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
     "@types/react-router": "^5.1.4",
