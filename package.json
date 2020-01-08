@@ -14,6 +14,8 @@
     "next:dev": "next dev",
     "next:export": "next build && next export",
     "next:start": "next start",
+    "now:build": "echo now:build",
+    "now:deploy": "yarn run now:build && now deploy",
     "npm:publish": "npm publish",
     "postpublish_": "git commit -m \"publish new version\" .",
     "prepublishOnly_": "yarn run ncu && yarn run sort-package-json && yarn run test",
