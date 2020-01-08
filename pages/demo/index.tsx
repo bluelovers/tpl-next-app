@@ -18,19 +18,29 @@ import { resolve } from 'url';
 //}
 
 import { createMemoryHistory } from 'history';
-import Header from '../../components/demo/header';
+import Bluebird from 'bluebird'
+import dynamic from 'next/dynamic'
+import { useRouter } from 'next/router'
+
+const Header = dynamic(() => Bluebird.resolve(import('../../components/demo/header')).delay(5000), {
+	loading: () => <p>...wait 5sec</p> ,
+	ssr: false,
+});
 
 const history = createMemoryHistory();
 
 function Item(props)
 {
-	return <li><Link href={props.children}>{props.children}</Link></li>;
+	const router = useRouter();
+	console.dir(router);
+	return <li>Click{' '}<Link href={props.children}><a>{props.children}</a></Link></li>;
 }
 
 export default () => (
 	<Router history={history}>
 		<Header />
 		<ul>
+
 			<Item href="/demo/styled-components">/demo/styled-components</Item>
 			<Item href="/demo/styled-components">/demo/styled-components/2</Item>
 		</ul>

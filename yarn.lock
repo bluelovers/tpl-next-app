@@ -940,6 +940,11 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
+"@types/bluebird@^3.5.29":
+  version "3.5.29"
+  resolved "https://registry.npmjs.org/@types/bluebird/-/bluebird-3.5.29.tgz#7cd933c902c4fc83046517a1bef973886d00bdb6"
+  integrity sha512-kmVtnxTuUuhCET669irqQmPAez4KFnFVKvpleVRyfC3g+SHD1hIkFZcWLim9BVcwUBLO59o8VZE4yGCmTif8Yw==
+
 "@types/history@*":
   version "4.7.3"
   resolved "https://registry.npmjs.org/@types/history/-/history-4.7.3.tgz#856c99cdc1551d22c22b18b5402719affec9839a"
@@ -1569,7 +1574,7 @@ bindings@^1.5.0:
   dependencies:
     file-uri-to-path "1.0.0"
 
-bluebird@^3.5.0, bluebird@^3.5.1, bluebird@^3.5.5:
+bluebird@^3.5.0, bluebird@^3.5.1, bluebird@^3.5.5, bluebird@^3.7.2:
   version "3.7.2"
   resolved "https://registry.npmjs.org/bluebird/-/bluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
   integrity sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==
@@ -4115,6 +4120,7 @@ node-releases@^1.1.44:
     semver "^6.3.0"
 
 "node-sass@npm:sass@^1", sass@^1.24.3:
+  name node-sass
   version "1.24.3"
   resolved "https://registry.npmjs.org/sass/-/sass-1.24.3.tgz#ee2ced4953e79343da0d54d96d6e6e1af6d44290"
   integrity sha512-RGpAeX0xAKUCcT9bNjVd2qcnqz9JkeDFXXLTclpuHJ4JfE8F1xC8SkasNroXqyDTRNFL4phPkvAN2Q8auAJfBQ==
@@ -5958,11 +5964,6 @@ tty-browserify@0.0.0:
   version "0.0.0"
   resolved "https://registry.npmjs.org/tty-browserify/-/tty-browserify-0.0.0.tgz#a157ba402da24e9bf957f9aa69d524eed42901a6"
   integrity sha1-oVe6QC2iTpv5V/mqadUk7tQpAaY=
-
-typed-binary-json@^1.14.8:
-  version "1.14.8"
-  resolved "https://registry.npmjs.org/typed-binary-json/-/typed-binary-json-1.14.8.tgz#bd2029bfa241a320b4be5586506336d40c0fc337"
-  integrity sha512-yzO3ceYwKMryJ5t13p7ktV4pBAwRoo/D7ZOfp8EJgR7ogkbIVxBlPI6dwYzlemtJK8o4/4AoVpu6Qiu0jrwLVA==
 
 typedarray-to-buffer@^3.1.5:
   version "3.1.5"

@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { useAmp } from 'next/amp'
 import Head from '../components/head'
 import Nav from '../components/nav'
 import '../styles/style.scss'
 
+import Layout from '../components/demo/Layout'
+import Byline from '../components/demo/Byline'
+
 const Home = () => {
   const [date, setDate] = useState(null);
+
 
   useEffect(() => {
     async function getDate() {
@@ -17,9 +22,11 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <Layout>
       <Head title="Home" />
       <Nav />
+
+      <Byline author="Dan Zajdband" />
 
       <div className="hero">
         <h1 className="title example">Welcome to Next!</h1>
@@ -131,7 +138,7 @@ const Home = () => {
           color: #333;
         }
       `}</style>
-    </div>
+    </Layout>
   )
 }
 

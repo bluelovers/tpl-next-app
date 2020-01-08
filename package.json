@@ -10,6 +10,10 @@
     "coverage": "npx nyc yarn run test",
     "lint": "npx eslint **/*.ts",
     "ncu": "npx yarn-tool ncu -u",
+    "build": "yarn run next:build",
+    "dev": "yarn run next:dev",
+    "export": "yarn run next:export",
+    "start": "yarn run next:start",
     "next:build": "next build",
     "next:dev": "next dev",
     "next:export": "next build && next export",
@@ -26,6 +30,7 @@
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
+    "bluebird": "^3.7.2",
     "dotenv": "^8.2.0",
     "next": "canary",
     "next-offline": "^4.0.6",
@@ -39,6 +44,7 @@
   },
   "devDependencies": {
     "@bluelovers/tsconfig": "^1.0.13",
+    "@types/bluebird": "^3.5.29",
     "@types/next-seo": "^1.10.0",
     "@types/node": "^13.1.4",
     "@types/react": "^16.9.17",
