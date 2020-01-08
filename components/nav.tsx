@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Header from './demo/header';
 
 const links = [
   { href: 'https://zeit.co/now', label: 'ZEIT', key: undefined },
@@ -22,6 +23,7 @@ const Nav = () => (
           <a href={href}>{label}</a>
         </li>
       ))}
+      <Header />
     </ul>
 
     <style jsx>{`

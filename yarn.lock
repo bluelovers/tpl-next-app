@@ -5959,6 +5959,11 @@ tty-browserify@0.0.0:
   resolved "https://registry.npmjs.org/tty-browserify/-/tty-browserify-0.0.0.tgz#a157ba402da24e9bf957f9aa69d524eed42901a6"
   integrity sha1-oVe6QC2iTpv5V/mqadUk7tQpAaY=
 
+typed-binary-json@^1.14.8:
+  version "1.14.8"
+  resolved "https://registry.npmjs.org/typed-binary-json/-/typed-binary-json-1.14.8.tgz#bd2029bfa241a320b4be5586506336d40c0fc337"
+  integrity sha512-yzO3ceYwKMryJ5t13p7ktV4pBAwRoo/D7ZOfp8EJgR7ogkbIVxBlPI6dwYzlemtJK8o4/4AoVpu6Qiu0jrwLVA==
+
 typedarray-to-buffer@^3.1.5:
   version "3.1.5"
   resolved "https://registry.npmjs.org/typedarray-to-buffer/-/typedarray-to-buffer-3.1.5.tgz#a97ee7a9ff42691b9f783ff1bc5112fe3fca9080"

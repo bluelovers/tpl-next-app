@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import Header from '../../../components/demo/header';
+import React from 'react';
 
 const Container = styled.div`
  width: 100%;
@@ -7,5 +9,5 @@ const Container = styled.div`
 `;
 
 export default () => (
-	<Container>Hello World</Container>
+	<Container><Header />Hello World</Container>
 )

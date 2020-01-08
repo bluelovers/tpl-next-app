@@ -18,6 +18,7 @@ import { resolve } from 'url';
 //}
 
 import { createMemoryHistory } from 'history';
+import Header from '../../components/demo/header';
 
 const history = createMemoryHistory();
 
@@ -28,6 +29,7 @@ function Item(props)
 
 export default () => (
 	<Router history={history}>
+		<Header />
 		<ul>
 			<Item href="/demo/styled-components">/demo/styled-components</Item>
 			<Item href="/demo/styled-components">/demo/styled-components/2</Item>

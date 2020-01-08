@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import Header from '../../../components/demo/header';
+import React from 'react';
 
 const padding = '3em';
 
@@ -11,7 +13,7 @@ const Section = styled.section`
 `;
 
 export default () => (
-	<Section background="cornflowerblue">
+	<Section background="cornflowerblue"><Header />
 		✨ Magic
 	</Section>
 );
