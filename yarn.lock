@@ -6777,6 +6777,19 @@ ts-pnp@^1.1.2:
   resolved "https://registry.npmjs.org/ts-pnp/-/ts-pnp-1.1.5.tgz#840e0739c89fce5f3abd9037bb091dbff16d9dec"
   integrity sha512-ti7OGMOUOzo66wLF3liskw6YQIaSsBgc4GOAlWRnIEj8htCxJUxskanMUoJOD6MDCRAXo36goXJZch+nOS0VMA==
 
+ts-toolbelt@^6.0.1:
+  version "6.1.5"
+  resolved "https://registry.npmjs.org/ts-toolbelt/-/ts-toolbelt-6.1.5.tgz#78c159d34cd4a22a256c0a053f66ac63ab317ad9"
+  integrity sha512-KXvqFhGie7NS8XKX+6/JypeG7caJaKzXo16eOkGCGxLa2OX44xbmWeuDAkBpIRfEE1XcxVt9H/WmgI2bAlvbIg==
+
+ts-type@^1.2.12:
+  version "1.2.12"
+  resolved "https://registry.npmjs.org/ts-type/-/ts-type-1.2.12.tgz#7c59f19a2132fa887559e5f3e307a20a50281cc5"
+  integrity sha512-r7OKmpKUa5GIPs8Gc4y3ibWQxn53E0B3thmVyu0oR9dkYtuO0T377IfeHKwfyFh4gk3/0OMIbu9Yq94R9lFT/Q==
+  dependencies:
+    ts-toolbelt "^6.0.1"
+    typedarray-dts "^1.0.0"
+
 tslib@^1.9.0:
   version "1.10.0"
   resolved "https://registry.npmjs.org/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
@@ -6791,6 +6804,11 @@ type-fest@^0.3.1:
   version "0.3.1"
   resolved "https://registry.npmjs.org/type-fest/-/type-fest-0.3.1.tgz#63d00d204e059474fe5e1b7c011112bbd1dc29e1"
   integrity sha512-cUGJnCdr4STbePCgqNFbpVNCepa+kAVohJs1sLhxzdH+gnEoOd8VhbYa7pD3zZYGiURWM2xzEII3fQcRizDkYQ==
+
+typedarray-dts@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/typedarray-dts/-/typedarray-dts-1.0.0.tgz#9dec9811386dbfba964c295c2606cf9a6b982d06"
+  integrity sha512-Ka0DBegjuV9IPYFT1h0Qqk5U4pccebNIJCGl8C5uU7xtOs+jpJvKGAY4fHGK25hTmXZOEUl9Cnsg5cS6K/b5DA==
 
 typedarray-to-buffer@^3.1.5:
   version "3.1.5"

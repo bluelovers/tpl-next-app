@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, Component } from 'react'
 //import Link from 'next/link'
 import { useAmp } from 'next/amp'
 import Head from '../components/head'
@@ -11,6 +11,7 @@ import Paper from '@material-ui/core/Paper';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
+import clsx from 'clsx';
 
 import 'roboto-fontface/css/roboto/sass/roboto-fontface.scss';
 //import 'typeface-roboto';
@@ -19,6 +20,7 @@ import Layout from '../components/demo/Layout'
 import DateLoading from '../components/demo/api/Date';
 import { maxWidth } from '@material-ui/system';
 import Button from '@material-ui/core/Button';
+import { ButtonTheme } from '../components/PrefersLightMode';
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
@@ -62,9 +64,18 @@ const Home = () =>
 			<div className="hero">
 				<h1 className="title example">Welcome to Next!</h1>
 
-				<Grid container className={classes.root + ' ' + classes.rootColumn}>
+				<Grid container className={clsx({
+					[classes.root]: true,
+					[classes.rootColumn]: true,
+				})}>
 					<Typography align="center">To get started, edit the <code>pages/index.js</code> or <code>pages/api/date.ts</code> files, then save to reload.</Typography>
 					<Grid>The date is:&nbsp; <DateLoading /></Grid>
+				</Grid>
+
+				<Grid container className={clsx({
+					[classes.root]: true,
+				})}>
+					<ButtonTheme>Switch Theme Mode</ButtonTheme>
 				</Grid>
 
 				<Grid className={classes.root} container justify="center" spacing={spacing}>
