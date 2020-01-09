@@ -8,6 +8,12 @@
 yarn run next:start
 ```
 
+## live demo
+
+- https://tpl-next-app.now.sh/
+- https://tpl-next-app.bluelovers.now.sh/
+- 
+
 ## now secrets
 
 ```
