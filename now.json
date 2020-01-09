@@ -11,5 +11,9 @@
       "SECRET": "@my-secret-key",
       "ANOTHER_SECRET": "my-other-secret-key"
     }
+  },
+  "github": {
+    "silent": true,
+    "autoJobCancelation": true
   }
 }

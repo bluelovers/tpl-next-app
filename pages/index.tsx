@@ -3,60 +3,63 @@ import Link from 'next/link'
 import { useAmp } from 'next/amp'
 import Head from '../components/head'
 import Nav from '../components/nav'
-import '../styles/style.scss'
+import '../assets/styles/style.scss'
 
 import Layout from '../components/demo/Layout'
 import Byline from '../components/demo/Byline'
 
-const Home = () => {
-  const [date, setDate] = useState(null);
+const Home = () =>
+{
+	const [date, setDate] = useState(null);
 
+	useEffect(() =>
+	{
+		async function getDate()
+		{
+			const res = await fetch('/api/date');
+			const newDate = await res.json();
+			setDate(newDate);
+		}
 
-  useEffect(() => {
-    async function getDate() {
-      const res = await fetch('/api/date');
-      const newDate = await res.json();
-      setDate(newDate);
-    }
-    getDate();
-  }, []);
+		getDate();
+	}, []);
 
-  return (
-    <Layout>
-      <Head title="Home" />
-      <Nav />
+	return (
+		<Layout>
+			<Head title="Home" />
+			<Nav />
 
-      <Byline author="Dan Zajdband" />
+			<Byline author="Dan Zajdband" />
 
-      <div className="hero">
-        <h1 className="title example">Welcome to Next!</h1>
-        <p className="description">
-          To get started, edit the <code>pages/index.js</code> or <code>pages/api/date.ts</code> files, then save to reload.
-        </p>
+			<div className="hero">
+				<h1 className="title example">Welcome to Next!</h1>
+				<p className="description">
+					To get started, edit the <code>pages/index.js</code> or <code>pages/api/date.ts</code> files, then save to reload.
+				</p>
 
-        <p className="row date">
-          The date is:&nbsp; {date
-          ? <span><b>{date.date}</b></span>
-          : <span className="loading"></span>}
-        </p>
+				<p className="row date">
+					The date is:&nbsp; {date
+					? <span><b>{date.date}</b></span>
+					: <span className="loading"></span>}
+				</p>
 
-        <div className='row'>
-            <a className='card' href='https://github.com/zeit/next.js#setup'>
-              <h3>Getting Started &rarr;</h3>
-              <p>Learn more about Next.js on GitHub and in their examples.</p>
-            </a>
-            <a className='card' href='https://github.com/zeit/next.js/tree/master/examples'>
-              <h3>Examples &rarr;</h3>
-              <p>Find other example boilerplates on the Next.js GitHub.</p>
-            </a>
-            <a className='card' href='https://github.com/zeit/next.js'>
-              <h3>Create Next App &rarr;</h3>
-              <p>Was this tool helpful? Let us know how we can improve it!</p>
-            </a>
-        </div>
-      </div>
+				<div className='row'>
+					<a className='card' href='https://github.com/zeit/next.js#setup'>
+						<h3>Getting Started &rarr;</h3>
+						<p>Learn more about Next.js on GitHub and in their examples.</p>
+					</a>
+					<a className='card' href='https://github.com/zeit/next.js/tree/master/examples'>
+						<h3>Examples &rarr;</h3>
+						<p>Find other example boilerplates on the Next.js GitHub.</p>
+					</a>
+					<a className='card' href='https://github.com/zeit/next.js'>
+						<h3>Create Next App &rarr;</h3>
+						<p>Was this tool helpful? Let us know how we can improve it!</p>
+					</a>
+				</div>
+			</div>
 
-      <style jsx>{`
+			<style jsx>{`
         .hero {
           width: 100%;
           color: #333;
@@ -132,8 +135,8 @@ const Home = () => {
           color: #333;
         }
       `}</style>
-    </Layout>
-  )
+		</Layout>
+	)
 }
 
 export default Home

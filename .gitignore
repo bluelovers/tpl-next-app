@@ -102,3 +102,4 @@ yarn-error.log*
 !/.env
 /.npmignore
 *.tbj
+!/.browserslistrc
