@@ -4,12 +4,9 @@ import { ThemeProvider } from 'styled-components'
 import NProgress from 'nprogress'
 import Router from 'next/router'
 import '../styles/nprogress.css'
+import { createMuiTheme, darken, fade } from '@material-ui/core/styles';
 
-const theme = {
-	colors: {
-		primary: '#0070f3',
-	},
-};
+const theme = createMuiTheme();
 
 Router.events.on('routeChangeStart', url => {
 	console.log(`Loading: ${url}`)
