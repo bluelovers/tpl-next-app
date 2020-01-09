@@ -4748,9 +4748,9 @@ normalize-url@1.9.1:
     sort-keys "^1.0.0"
 
 now@canary:
-  version "16.7.2-canary.5"
-  resolved "https://registry.npmjs.org/now/-/now-16.7.2-canary.5.tgz#e5cf49f1c356b33041e27a63cf6167774147d6c3"
-  integrity sha512-bYURzSQiEsX0/uR1m3uyP8kbOw+92DQJR3ojbIOa5bET/MbKFfIpTCyt0RfFYBjYRVFhqMMrNRmSzBgWC4H2zw==
+  version "16.7.2-canary.6"
+  resolved "https://registry.npmjs.org/now/-/now-16.7.2-canary.6.tgz#97a6e23d5c1229eaf6483f4b978c5d1b6aa28e57"
+  integrity sha512-SS8XnBstpjKbVpjUICDiEPYC81zM/WRNc0gKnXifuiiVeL5Dj5LNdcLiEzCoOUIfc53yXjrbrDLKdvwDSLBWpQ==
 
 nprogress@^0.2.0:
   version "0.2.0"
