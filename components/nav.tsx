@@ -13,6 +13,7 @@ const links = [
 
 const Nav = () => (
 	<nav>
+
 		<ul>
 			<li>
 				<Link href="/">
@@ -24,15 +25,12 @@ const Nav = () => (
 					<a href={href}>{label}</a>
 				</li>
 			))}
-			<Header />
 		</ul>
 
+		<Header />
+
 		<style jsx>{`
-      :global(body) {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
-          Helvetica, sans-serif;
-      }
+      :global(body) {}
       nav {
         text-align: center;
       }

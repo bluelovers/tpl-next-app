@@ -1,71 +1,106 @@
 import React, { useEffect, useState } from 'react'
-import Link from 'next/link'
+//import Link from 'next/link'
 import { useAmp } from 'next/amp'
 import Head from '../components/head'
 import Nav from '../components/nav'
 import '../assets/styles/style.scss'
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import Grid, { GridSpacing } from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
 
 import Layout from '../components/demo/Layout'
-import Byline from '../components/demo/Byline'
+import DateLoading from '../components/demo/api/Date';
+import { maxWidth } from '@material-ui/system';
+import Button from '@material-ui/core/Button';
+
+const useStyles = makeStyles((theme: Theme) =>
+	createStyles({
+		root: {
+			flexGrow: 1,
+			alignItems: 'center',
+			display: 'flex',
+			flexDirection: 'row',
+			justifyContent: 'space-around',
+			margin: '80px auto 40px;',
+			maxWidth: '100%',
+		},
+		rootColumn: {
+			flexDirection: 'column',
+		},
+		paper: {
+			width: 220,
+			padding: theme.spacing(2),
+			textAlign: 'center',
+			//color: theme.palette.text.secondary,
+		},
+	}),
+);
+
+const OLink = (props) => (<Link color="inherit" target="_blank" rel="noopener" {...props} />);
 
 const Home = () =>
 {
-	const [date, setDate] = useState(null);
+	const classes = useStyles({});
 
-	useEffect(() =>
-	{
-		async function getDate()
-		{
-			const res = await fetch('/api/date');
-			const newDate = await res.json();
-			setDate(newDate);
-		}
-
-		getDate();
-	}, []);
+	const [spacing, setSpacing] = React.useState<GridSpacing>(2);
 
 	return (
 		<Layout>
 			<Head title="Home" />
-			<Nav />
 
-			<Byline author="Dan Zajdband" />
+			<div>
+				<Nav />
+			</div>
 
 			<div className="hero">
 				<h1 className="title example">Welcome to Next!</h1>
-				<p className="description">
-					To get started, edit the <code>pages/index.js</code> or <code>pages/api/date.ts</code> files, then save to reload.
-				</p>
 
-				<p className="row date">
-					The date is:&nbsp; {date
-					? <span><b>{date.date}</b></span>
-					: <span className="loading"></span>}
-				</p>
+				<Grid container className={classes.root + ' ' + classes.rootColumn}>
+					<Typography align="center">To get started, edit the <code>pages/index.js</code> or <code>pages/api/date.ts</code> files, then save to reload.</Typography>
+					<Grid>The date is:&nbsp; <DateLoading /></Grid>
+				</Grid>
 
-				<div className='row'>
-					<a className='card' href='https://github.com/zeit/next.js#setup'>
-						<h3>Getting Started &rarr;</h3>
-						<p>Learn more about Next.js on GitHub and in their examples.</p>
-					</a>
-					<a className='card' href='https://github.com/zeit/next.js/tree/master/examples'>
-						<h3>Examples &rarr;</h3>
-						<p>Find other example boilerplates on the Next.js GitHub.</p>
-					</a>
-					<a className='card' href='https://github.com/zeit/next.js'>
-						<h3>Create Next App &rarr;</h3>
-						<p>Was this tool helpful? Let us know how we can improve it!</p>
-					</a>
-				</div>
+				<Grid className={classes.root} container justify="center" spacing={spacing}>
+					<Grid item>
+						<Paper className={classes.paper}>
+							<OLink href='https://github.com/zeit/next.js#setup'>
+								<h3>Getting Started &rarr;</h3>
+								<Typography>Learn more about Next.js on GitHub and in their examples.</Typography>
+							</OLink>
+						</Paper>
+					</Grid>
+
+					<Grid item>
+						<Paper className={classes.paper}>
+							<OLink href='https://github.com/zeit/next.js/tree/master/examples'>
+								<h3>Examples &rarr;</h3>
+								<Typography>Find other example boilerplates on the Next.js GitHub.</Typography>
+							</OLink>
+						</Paper>
+					</Grid>
+
+					<Grid item>
+						<Paper className={classes.paper}>
+							<OLink href='https://github.com/zeit/next.js'>
+								<h3>Create Next App &rarr;</h3>
+								<Typography>Was this tool helpful? Let us know how we can improve it!</Typography>
+							</OLink>
+						</Paper>
+					</Grid>
+				</Grid>
+
 			</div>
 
 			<style jsx>{`
         .hero {
           width: 100%;
-          color: #333;
         }
         .title {
-          margin: 0;
+          margin: auto;
           width: 100%;
           padding-top: 80px;
           line-height: 1.15;
@@ -74,65 +109,6 @@ const Home = () =>
         .title,
         .description {
           text-align: center;
-        }
-        .row {
-          max-width: 880px;
-          margin: 80px auto 40px;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-        }
-        .date {
-          height: 24px;
-          max-width: calc(100% - 32px)
-          text-align: center;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 0 16px;
-        }
-        .date p {
-          text-align: center;
-        }
-        .date span {
-          width: 176px;
-          text-align: center;
-        }
-        @keyframes Loading {
-          0%{background-position:0% 50%}
-          50%{background-position:100% 50%}
-          100%{background-position:0% 50%}
-        }
-        .date .loading {
-          max-width: 100%;
-          height: 24px;
-          border-radius: 4px;
-          display: inline-block;
-          background: linear-gradient(270deg, #D1D1D1, #EAEAEA);
-          background-size: 200% 200%;
-          animation: Loading 2s ease infinite;
-        }
-        .card {
-          padding: 18px 18px 24px;
-          width: 220px;
-          text-align: left;
-          text-decoration: none;
-          color: #434343;
-          border: 1px solid #9b9b9b;
-        }
-        .card:hover {
-          border-color: #067df7;
-        }
-        .card h3 {
-          margin: 0;
-          color: #067df7;
-          font-size: 18px;
-        }
-        .card p {
-          margin: 0;
-          padding: 12px 0 0;
-          font-size: 13px;
-          color: #333;
         }
       `}</style>
 		</Layout>
