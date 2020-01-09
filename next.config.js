@@ -6,6 +6,7 @@ const withCSS = require('@zeit/next-css');
 const withWorkers = require('@zeit/next-workers');
 const withOffline = require('next-offline');
 const withMDX = require('@next/mdx');
+const withFonts = require('next-fonts');
 
 const {
 	PHASE_DEVELOPMENT_SERVER,
@@ -31,13 +32,15 @@ module.exports = chain([
 	},
 ], chain([
 
-//	withOffline,
+	withOffline,
 	withSass,
 	withCSS,
 
-	withWorkers,
+//	withWorkers,
 
 	withMDX(),
+
+	withFonts,
 
 ], {
 	env: {
