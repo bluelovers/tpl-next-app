@@ -3,8 +3,8 @@
 require('dotenv').config();
 const withSass = require('@zeit/next-sass');
 const withCSS = require('@zeit/next-css');
-const withWorkers = require('@zeit/next-workers');
-const withOffline = require('next-offline');
+//const withWorkers = require('@zeit/next-workers');
+//const withOffline = require('next-offline');
 const withMDX = require('@next/mdx');
 const withFonts = require('next-fonts');
 
@@ -32,7 +32,7 @@ module.exports = chain([
 	},
 ], chain([
 
-	withOffline,
+//	withOffline,
 	withSass,
 	withCSS,
 
@@ -82,5 +82,14 @@ module.exports = chain([
 //	},
 
 	pageExtensions: ['mdx', 'jsx', 'js', 'ts', 'tsx'],
+
+	webpack(config)
+	{
+		console.dir(config, {
+			depths: 5,
+		});
+
+		return config;
+	},
 
 }));
