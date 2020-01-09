@@ -32,8 +32,9 @@ module.exports = chain([
 ], chain([
 
 	withOffline,
-	withCSS,
 	withSass,
+	withCSS,
+
 	//withWorkers,
 
 	withMDX(),

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
 import NoSsr from '@material-ui/core/NoSsr';
+import 'roboto-fontface/css/roboto/sass/roboto-fontface.scss';
 
 const StyledButton = styled(Button)`
   background: linear-gradient(45deg, #fe6b8b 30%, #ff8e53 90%);
