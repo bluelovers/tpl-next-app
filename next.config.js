@@ -4,7 +4,8 @@ require('dotenv').config();
 const withSass = require('@zeit/next-sass');
 const withCSS = require('@zeit/next-css');
 const withWorkers = require('@zeit/next-workers');
-const withOffline = require('next-offline')
+const withOffline = require('next-offline');
+const withMDX = require('@next/mdx');
 
 const {
 	PHASE_DEVELOPMENT_SERVER,
@@ -34,6 +35,8 @@ module.exports = chain([
 	withCSS,
 	withSass,
 	//withWorkers,
+
+	withMDX(),
 
 ], {
 	env: {
@@ -73,5 +76,7 @@ module.exports = chain([
 //			]
 //		},
 //	},
+
+	pageExtensions: ['mdx', 'jsx', 'js', 'ts', 'tsx'],
 
 }));
