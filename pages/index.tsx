@@ -12,6 +12,9 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 
+import 'roboto-fontface/css/roboto/sass/roboto-fontface.scss';
+//import 'typeface-roboto';
+
 import Layout from '../components/demo/Layout'
 import DateLoading from '../components/demo/api/Date';
 import { maxWidth } from '@material-ui/system';

@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
 import NoSsr from '@material-ui/core/NoSsr';
-import 'roboto-fontface/css/roboto/sass/roboto-fontface.scss';
-//import 'typeface-roboto';
+
 import { createMuiTheme, darken, fade } from '@material-ui/core/styles';
 import { useTheme, MuiThemeProvider, ThemeProvider } from '@material-ui/core/styles';
 
