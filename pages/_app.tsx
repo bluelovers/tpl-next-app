@@ -1,18 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import App, { Container } from 'next/app';
 //import { ThemeProvider } from 'styled-components'
 import NProgress from 'nprogress'
 import Router from 'next/router'
 import '../assets/styles/nprogress.css'
-import { createMuiTheme, darken, fade, ThemeProvider } from '@material-ui/core/styles';
+import { createMuiTheme, darken, fade, ThemeProvider, MuiThemeProvider } from '@material-ui/core/styles';
 import { createGlobalStyle } from 'styled-components';
 import CssBaseline from '@material-ui/core/CssBaseline';
-
-const theme = createMuiTheme({
-	palette: {
-		type: 'dark',
-	},
-});
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import PrefersLightMode from '../components/PrefersLightMode';
+import NoSsr from '@material-ui/core/NoSsr';
 
 Router.events.on('routeChangeStart', url =>
 {
@@ -37,10 +34,10 @@ export default class MyApp extends App
 		const { Component, pageProps } = this.props;
 		return (
 				<React.StrictMode>
-					<ThemeProvider theme={theme}>
-						<CssBaseline />
-						<Component {...pageProps} />
-					</ThemeProvider>
+						<PrefersLightMode key="PrefersLightMode">
+							<CssBaseline />
+							<Component {...pageProps} />
+						</PrefersLightMode>
 				</React.StrictMode>
 		)
 	}

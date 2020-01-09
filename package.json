@@ -40,6 +40,8 @@
     "bluebird": "^3.7.2",
     "dotenv": "^8.2.0",
     "material-icons": "^0.3.1",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.27",
     "next": "canary",
     "next-offline": "^4.0.6",
     "node-sass": "npm:sass@^1",
@@ -57,6 +59,7 @@
   "devDependencies": {
     "@bluelovers/tsconfig": "^1.0.13",
     "@types/bluebird": "^3.5.29",
+    "@types/moment-timezone": "^0.5.12",
     "@types/next-seo": "^1.10.0",
     "@types/node": "^13.1.4",
     "@types/nprogress": "^0.2.0",
