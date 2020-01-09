@@ -1,8 +1,10 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import moment from 'moment-timezone';
+import { Settings, DateTime } from 'luxon';
 
 let defaultTimeZone = "Asia/Taipei";
-moment.tz.setDefault(defaultTimeZone);
+//moment.tz.setDefault(defaultTimeZone);
+Settings.defaultZoneName = defaultTimeZone;
 
 /**
  * https://nextjs.org/docs/api-routes/api-middlewares
@@ -17,11 +19,12 @@ export let config: {
 
 export default (req: NextApiRequest, res: NextApiResponse) =>
 {
-	const date = moment();
+//	const date = moment();
+	const date = DateTime.local();
 
 	res.json({
-		date: date.format(),
-		unix: date.unix(),
+		date: date.toString(),
+		unix: date.toSeconds(),
 		timestamp: date.valueOf(),
 	})
 }
