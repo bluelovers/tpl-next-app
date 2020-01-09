@@ -19,7 +19,7 @@
     "next:dev": "next dev",
     "next:export": "yarn run next:build && next export",
     "next:start": "next start",
-    "now:build": "echo now:build",
+    "now:build": "yarn run build:clear",
     "now:deploy": "yarn run now:build && now deploy",
     "npm:publish": "npm publish",
     "postpublish_": "git commit -m \"publish new version\" .",
