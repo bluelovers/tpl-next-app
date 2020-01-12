@@ -1,12 +1,12 @@
 import React from 'react'
 import NextHead from 'next/head'
-import { string } from 'prop-types'
+import { string, InferProps } from 'prop-types'
 
 const defaultDescription = ''
 const defaultOGURL = ''
 const defaultOGImage = ''
 
-const Head = props => (
+const Head = (props: InferProps<typeof Head.propTypes>) => (
 	<NextHead>
 		<meta charSet="UTF-8" />
 		<title>{props.title || ''}</title>
