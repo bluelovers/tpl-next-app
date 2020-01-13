@@ -12,6 +12,9 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import clsx from 'clsx';
+import dynamic from 'next/dynamic'
+
+import SSROnly from '../components/IsServer';
 
 import 'roboto-fontface/css/roboto/sass/roboto-fontface.scss';
 //import 'typeface-roboto';
@@ -21,6 +24,7 @@ import DateLoading from '../components/demo/api/Date';
 import { maxWidth } from '@material-ui/system';
 import Button from '@material-ui/core/Button';
 import { ButtonTheme } from '../components/PrefersLightMode';
+import Bluebird from 'bluebird';
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
@@ -53,6 +57,8 @@ const Home = () =>
 
 	const [spacing, setSpacing] = React.useState<GridSpacing>(2);
 
+
+
 	return (
 		<Layout>
 			<Head title="Home" />
@@ -76,6 +82,12 @@ const Home = () =>
 					[classes.root]: true,
 				})}>
 					<ButtonTheme>Switch Theme Mode</ButtonTheme>
+				</Grid>
+
+				<Grid container className={clsx({
+					[classes.root]: true,
+				})}>
+
 				</Grid>
 
 				<Grid className={classes.root} container justify="center" spacing={spacing}>

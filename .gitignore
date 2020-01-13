@@ -103,3 +103,4 @@ yarn-error.log*
 /.npmignore
 *.tbj
 !/.browserslistrc
+!/yarn.lock
