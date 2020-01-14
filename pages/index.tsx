@@ -13,8 +13,13 @@ import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 import clsx from 'clsx';
 import dynamic from 'next/dynamic'
+import LazyHydrate from "react-lazy-hydration";
 
-import SSROnly from '../components/IsServer';
+//import IsServer from '../components/IsServer';
+
+const IsServer = dynamic(() => import('../components/IsServer'), {
+	ssr: true,
+});
 
 import 'roboto-fontface/css/roboto/sass/roboto-fontface.scss';
 //import 'typeface-roboto';
@@ -87,7 +92,9 @@ const Home = () =>
 				<Grid container className={clsx({
 					[classes.root]: true,
 				})}>
-
+					<LazyHydrate ssrOnly>
+						<IsServer/>
+					</LazyHydrate>
 				</Grid>
 
 				<Grid className={classes.root} container justify="center" spacing={spacing}>

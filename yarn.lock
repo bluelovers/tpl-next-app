@@ -5939,6 +5939,11 @@ react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.0, react-is@^16.8.1, react-is
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.12.0.tgz#2cc0fe0fba742d97fd527c42a13bec4eeb06241c"
   integrity sha512-rPCkf/mWBtKc97aLL9/txD8DZdemK0vkA3JMLShjlJB3Pj3s+lpf1KaBzMfQrAmhMQB0n1cU/SUGgKKBCe837Q==
 
+react-lazy-hydration@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.npmjs.org/react-lazy-hydration/-/react-lazy-hydration-0.0.7.tgz#1e73708cbc691980873bc144dbc7cdb39b5595a2"
+  integrity sha512-HneNASHPyzwDj9t+gDQx57cM+a3l6+EMr/LJBLHb1U2h4c4W3SY4oyraX30M9lWSUWK19pGy304J5SeZEf24lg==
+
 react-redux@^7.1.3:
   version "7.1.3"
   resolved "https://registry.npmjs.org/react-redux/-/react-redux-7.1.3.tgz#717a3d7bbe3a1b2d535c94885ce04cdc5a33fc79"
