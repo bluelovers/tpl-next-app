@@ -4,7 +4,7 @@ export default () => {
 
 	console.log(`isServer`, String(typeof window === 'undefined'));
 
-	return <>
+	return <span>
 		server: {String(typeof window === 'undefined')} {process.browser.toString()}
-	</>;
+	</span>;
 }
