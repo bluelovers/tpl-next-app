@@ -38,7 +38,7 @@ module.exports = chain([
 
 //	withWorkers,
 
-	withMDX(),
+	//withMDX(),
 
 	withFonts,
 
@@ -81,7 +81,7 @@ module.exports = chain([
 //		},
 //	},
 
-	pageExtensions: ['mdx', 'jsx', 'js', 'ts', 'tsx'],
+	//pageExtensions: ['mdx', 'jsx', 'js', 'ts', 'tsx'],
 
 	webpack(config)
 	{

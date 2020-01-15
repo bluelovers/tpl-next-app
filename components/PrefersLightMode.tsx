@@ -5,7 +5,7 @@ import { ThemeOptions } from '@material-ui/core/styles/createMuiTheme';
 import { Button } from '@material-ui/core';
 import { ButtonTypeMap } from '@material-ui/core/Button/Button';
 
-import { useTheme, createTheme, IThemeExtra } from '../lib/theme';
+import { useTheme, createTheme, IThemeExtra } from 'material-ui-theme-state/lib/global';
 
 export function prefersLightMode()
 {

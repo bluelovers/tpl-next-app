@@ -41,6 +41,7 @@
     "lodash-decorators": "^6.0.1",
     "luxon": "^1.21.3",
     "material-icons": "^0.3.1",
+    "material-ui-theme-state": "^1.0.7",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.27",
     "next": "canary",
