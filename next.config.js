@@ -7,6 +7,7 @@ const withCSS = require('@zeit/next-css');
 //const withOffline = require('next-offline');
 const withMDX = require('@next/mdx');
 const withFonts = require('next-fonts');
+const withWorkspacesSupport = require('webpack-workspaces-support/nextjs');
 
 const {
 	PHASE_DEVELOPMENT_SERVER,
@@ -41,6 +42,8 @@ module.exports = chain([
 	//withMDX(),
 
 	withFonts,
+
+	withWorkspacesSupport,
 
 ], {
 	env: {

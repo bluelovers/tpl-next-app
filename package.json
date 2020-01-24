@@ -41,6 +41,7 @@
     "lodash-decorators": "^6.0.1",
     "luxon": "^1.21.3",
     "material-icons": "^0.3.1",
+    "material-table": "^1.55.0",
     "material-ui-theme-state": "^1.0.7",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.27",
@@ -65,7 +66,8 @@
     "sass": "^1.24.3",
     "styled-components": "^4.4.1",
     "ts-type": "^1.2.12",
-    "typeface-roboto": "^0.0.75"
+    "typeface-roboto": "^0.0.75",
+    "webpack-workspaces-support": "^1.0.4"
   },
   "devDependencies": {
     "@bluelovers/tsconfig": "^1.0.13",
